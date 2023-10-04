@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    char replaceChar;
+    int index;
+
+    printf("Enter a string: ");
+    gets(str); 
+    
+    printf("Enter the index position (0-based) to replace a letter: ");
+    scanf("%d", &index);
+
+    if (index < 0 || index >= strlen(str)) 
+    {
+        printf("Invalid index. The index is out of range.\n");
+        return 1; 
+    }
+
+    printf("Enter the letter to replace it with: ");
+    scanf(" %c", &replaceChar); 
+
+
+    str[index] = replaceChar;
+
+    printf("Final string after replacement: %s\n", str);
+
+    return 0;
+}
