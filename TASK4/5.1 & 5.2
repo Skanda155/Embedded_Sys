@@ -1,0 +1,30 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char a[100],b[100];
+    int index,x,y;
+    
+    printf("Enter the string:");
+    scanf("%s",a);
+    
+    printf("Enter the substring:");
+    scanf("%s",b);
+    
+    printf("Enter the index position to be replaced:");
+    scanf("%d",&index);
+    
+    x = strlen(a);
+    y = strlen(b);
+    
+    for(int i = x; i>=index ; i--)
+    a[y+i] = a[i];
+    
+    for(int i =0 ;i<y; i++)
+    a[index+i] = b[i];
+    
+    printf("The new string is:%s",a);
+
+    return 0;
+}
