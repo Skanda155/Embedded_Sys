@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[10],str2[100];
+    int i=0,j=0;
+
+    printf("Enter the first string:");
+    scanf("%s",&str1);
+    
+    printf("Enter the second string:");
+     scanf("%s",&str2);
+    
+    for( i=0;str1[i]!='\0';i++)
+    {
+        if(str1[i] != str2[i])
+        {
+            j = 1;
+            break;
+        }
+    }
+    
+    if(j == 1)
+       printf(" string are not same"); 
+    else
+        printf("string are same"); 
+}
